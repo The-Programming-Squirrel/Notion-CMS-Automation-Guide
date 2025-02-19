@@ -1,0 +1,24 @@
+name: "📖 Documentation Issue"
+about: "Report missing or unclear documentation in Notion CMS Automation Guide"
+title: "[DOCS] - "
+labels: [documentation]
+body:
+  - type: markdown
+    attributes:
+      value: "### 📝 Help us improve the documentation!"
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: "📌 What Needs to be Updated?"
+      description: "Describe the missing or incorrect information."
+      placeholder: "The API integration guide is outdated..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-fix
+    attributes:
+      label: "🛠 Suggested Fix"
+      description: "What information should be added or corrected?"
+      placeholder: "The new API endpoint should be..."

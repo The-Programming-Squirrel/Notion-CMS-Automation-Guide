@@ -1,0 +1,31 @@
+name: Code Linting
+
+on:
+  pull_request:
+    branches:
+      - main  # Run checks before merging to main
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set Up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.9"
+
+      - name: Install Dependencies
+        run: pip install black flake8
+
+      - name: Run Black (Code Formatter)
+        run: black --check .
+
+      - name: Run Flake8 (Style Guide)
+        run: flake8 --max-line-length=88 --exclude=.git,__pycache__,_build
