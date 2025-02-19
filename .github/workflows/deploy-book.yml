@@ -1,0 +1,36 @@
+name: Deploy Jupyter Book
+
+on:
+  push:
+    branches:
+      - main  # Deploy only when changes are pushed to main
+  workflow_dispatch:  # Allow manual triggering of workflow
+
+permissions:
+  contents: write  # Allow GitHub Actions to commit changes
+  pages: write  # Required to deploy GitHub Pages
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set Up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.9"
+
+      - name: Install Jupyter Book
+        run: pip install jupyter-book
+
+      - name: Build Jupyter Book
+        run: jupyter-book build .
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_build/html

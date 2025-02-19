@@ -1,0 +1,30 @@
+name: "✨ Feature Request"
+about: "Propose a new feature or improvement for Notion CMS Automation Guide"
+title: "[FEATURE] - "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: "### 💡 Have an idea for improving the Notion CMS workflow? Let us know!"
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: "📌 Feature Summary"
+      description: "Describe your feature idea and its use case."
+      placeholder: "I'd like a script to automatically..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-benefits
+    attributes:
+      label: "🚀 Expected Benefits"
+      description: "How will this feature improve workflow automation?"
+      placeholder: "This will help automate Notion content tagging..."
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "🔗 Additional Context (Optional)"
+      description: "Links, references, or images that support your request."
