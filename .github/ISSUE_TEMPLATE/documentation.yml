@@ -1,5 +1,5 @@
 name: "📖 Documentation Issue"
-about: "Report missing or unclear documentation in Notion CMS Automation Guide"
+description: "Report missing or unclear documentation in Notion CMS Automation Guide"
 title: "[DOCS] - "
 labels: [documentation]
 body:

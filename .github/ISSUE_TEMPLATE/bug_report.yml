@@ -1,5 +1,5 @@
 name: "🐞 Bug Report"
-about: "Report a bug or unexpected behavior in Notion CMS Automation Guide"
+description: "Report a bug or unexpected behavior in Notion CMS Automation Guide"
 title: "[BUG] - "
 labels: [bug]
 body:
