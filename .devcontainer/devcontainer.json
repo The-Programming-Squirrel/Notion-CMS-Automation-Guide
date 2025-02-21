@@ -1,0 +1,21 @@
+{
+    "name": "Jupyter Book Dev",
+    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.10",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:1": {},
+        "ghcr.io/devcontainers/features/node:1 "
+    },
+    "forwardPorts": [8888],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "yzhang.markdown-all-in-one",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    "postCreateCommand": "pip install -r requirements.txt",
+    "remoteUser": "vscode"
+}
